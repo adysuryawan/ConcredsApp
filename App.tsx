@@ -4,8 +4,20 @@ import { UserData, CreditStatus } from './types';
 
 // --- Static Data ---
 const sampleData: UserData[] = [
-  { email: 'aa@aa.com', name: 'Alex Anderson', creditStatus: CreditStatus.OK },
-  { email: 'bb@bb.com', name: 'Bailey Brown', creditStatus: CreditStatus.NOT_OK },
+  {
+    email: 'raffiahmad@example.com',
+    name: 'Raffi Ahmad',
+    creditStatus: CreditStatus.OK,
+    summary: 'Raffi Ahmad is an Indonesian actor, presenter, singer, entrepreneur, media personality, and film producer. He is the founder of the media company RANS Entertainment.',
+    aiPicturePlatformSummary: 'ChatGPT (GPT-4o) is considered one of the best overall AI picture generators, especially for its ability to handle complex queries and generate accurate text within images.'
+  },
+  {
+    email: 'fitraeri@example.com',
+    name: 'Fitra Eri',
+    creditStatus: CreditStatus.NOT_OK,
+    summary: 'Fitra Eri Purwotomo is an Indonesian race car driver, journalist, and internet celebrity. He is known for his automotive content, particularly as the Editor-in-Chief of Otodriver and a popular YouTuber.',
+    aiPicturePlatformSummary: 'ChatGPT (GPT-4o) is considered one of the best overall AI picture generators, especially for its ability to handle complex queries and generate accurate text within images.'
+  },
 ];
 
 
@@ -43,6 +55,14 @@ const ResultCard: FC<ResultCardProps> = ({ user }) => {
             </span>
           </div>
         </div>
+        <div className="mt-4">
+          <p className="text-sm text-gray-400">Summary</p>
+          <p className="text-md text-gray-300">{user.summary}</p>
+        </div>
+        <div className="mt-4">
+          <p className="text-sm text-gray-400">AI Picture Platform</p>
+          <p className="text-md text-gray-300">{user.aiPicturePlatformSummary}</p>
+        </div>
       </div>
     </div>
   );
@@ -54,6 +74,7 @@ const ResultCard: FC<ResultCardProps> = ({ user }) => {
 function App() {
   const [email, setEmail] = useState<string>('');
   const [result, setResult] = useState<UserData | null>(null);
+  
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -74,7 +95,7 @@ function App() {
       if (foundUser) {
         setResult(foundUser);
       } else {
-        setError('Email not found. Try "aa@aa.com" or "bb@bb.com".');
+        setError('Email not found. Try "raffiahmad@example.com" or "fitraeri@example.com".');
       }
       setIsLoading(false);
     }, 1500);
@@ -101,7 +122,7 @@ function App() {
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Enter email (e.g., aa@aa.com)"
+              placeholder="Enter email (e.g., raffiahmad@example.com)"
               className="w-full bg-gray-800 border border-gray-700 rounded-lg py-3 pr-4 pl-12 text-white placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-200"
               disabled={isLoading}
             />
