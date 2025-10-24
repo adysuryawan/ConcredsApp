@@ -1,0 +1,5 @@
+{
+  "name": "ConCreds2",
+  "description": "A simple web application to check conceptual credit scores based on email. Displays the status, user details, and a representative AI-generated image.",
+  "requestFramePermissions": []
+}
