@@ -9,14 +9,14 @@ const sampleData: UserData[] = [
     name: 'Raffi Ahmad',
     creditStatus: CreditStatus.OK,
     summary: 'Raffi Ahmad is an Indonesian actor, presenter, singer, entrepreneur, media personality, and film producer. He is the founder of the media company RANS Entertainment.',
-    aiPicturePlatformSummary: 'ChatGPT (GPT-4o) is considered one of the best overall AI picture generators, especially for its ability to handle complex queries and generate accurate text within images.'
+    aiPicturePlatformSummary: 'Gemini is considered one of the best overall AI picture generators, especially for its ability to handle complex queries and generate accurate text within images.'
   },
   {
     email: 'fitraeri@example.com',
     name: 'Fitra Eri',
     creditStatus: CreditStatus.NOT_OK,
     summary: 'Fitra Eri Purwotomo is an Indonesian race car driver, journalist, and internet celebrity. He is known for his automotive content, particularly as the Editor-in-Chief of Otodriver and a popular YouTuber.',
-    aiPicturePlatformSummary: 'ChatGPT (GPT-4o) is considered one of the best overall AI picture generators, especially for its ability to handle complex queries and generate accurate text within images.'
+    aiPicturePlatformSummary: 'Gemini is considered one of the best overall AI picture generators, especially for its ability to handle complex queries and generate accurate text within images.'
   },
 ];
 
